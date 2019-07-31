@@ -27,10 +27,31 @@ app.use(middlewares.handlers.session_invalid);
 app.use('/api', index_route); //TODO : BEWARE COMMENT THIS CODE BEFORE GOING LIVE
 //app.use('/api',middlewares.auth.isAuthenticated, index_route);
 
+//Test
+const server = app.listen(8181);
+
+if(process.argv.length > 2) {
+	switch(process.argv[2]){
+		case "build":
+			console.log('success');
+			server.close(() => {
+				//console.log('build Closed out remaining connections');
+				process.exit(0);
+			});
+			break;
+		default:
+			console.log('success');
+			server.close(() => {
+				//console.log('default Closed out remaining connections');
+				process.exit(0);
+			});
+			break;
+	}
+}
+
 // START THE SERVER
 // =============================================================================
-app.listen(port);
-console.log('Express is running on port ' + port);
+console.log('Server is running on port '+ port);
 
 // Since this is the last non-error-handling
 // middleware used, we assume 404, as nothing else

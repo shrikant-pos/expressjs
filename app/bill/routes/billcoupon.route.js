@@ -17,5 +17,14 @@ router.post('/deletebillcoupons', middlewares.handlers.asyncHandler(billcouponCo
 
 // custom routes
 
-module.exports = router;
+router.post('/getbills_all', middlewares.handlers.asyncHandler(billcouponController.getbills_all));
 
+router.post('/getbills_date', middlewares.handlers.asyncHandler(billcouponController.getbills_date));
+
+router.post('/getbilldetails', middlewares.handlers.asyncHandler(billcouponController.getbilldetails));
+
+router.post('/getbills_number_customer', middlewares.handlers.asyncHandler(billcouponController.getbills_number_customer));
+
+router.post('/getbills_location', middlewares.handlers.asyncHandler(billcouponController.getbills_location));
+
+module.exports = router;

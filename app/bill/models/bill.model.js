@@ -2,7 +2,6 @@ var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
 // Custom validation functions 
-//@@CustomValidations@@
 
 //Nested types declarations
 var billtype = require('./billtype.model');
@@ -12,58 +11,70 @@ var billpayment = require('./billpayment.model');
 var billcoupon = require('./billcoupon.model');
 var billtax = require('./billtax.model');
 
-
 var billSchema   = new Schema({
+	
         code: {
-        type: String,
-        required: 'code is required'
+        type: String ,
+		required: 'code is required'
 },
-    location: {
-        type: Number,
-        required: 'location is required'
+			
+        location: {
+        type: String ,
+		required: 'location is required'
 },
-    type: {
-        type: billtype.schema,
-        required: 'type is required'
+			
+        type: {
+        type: billtype.schema ,
+		required: 'type is required'
 },
-    billnumber: {
-        type: Number,
-        required: 'billnumber is required'
+			
+        billnumber: {
+        type: Number ,
+		required: 'billnumber is required'
 },
-    orders: {
-        type: [billorder.schema],
-        required: 'orders is required'
+			
+        orders: {
+        type: [billorder.schema] ,
+		required: 'orders is required'
 },
-    customerdetails: {
-        type: billcustomer.schema
+			
+        customerdetails: {
+        type: billcustomer.schema 
 },
-    paymentdetails: {
-        type: billpayment.schema
+			
+        paymentdetails: {
+        type: [billpayment.schema] 
 },
-    paymentstatus: {
-        type: String,
-        required: 'paymentstatus is required'
+			
+        paymentstatus: {
+        type: String ,
+		required: 'paymentstatus is required'
 },
-    coupons: {
-        type: billcoupon.schema
+			
+        coupons: {
+        type: [billcoupon.schema] 
 },
-    taxes: {
-        type: billtax.schema
+			
+        taxes: {
+        type: [billtax.schema] 
 },
-    billamount: {
-        type: Number,
-        required: 'billamount is required'
+			
+        billamount: {
+        type: Number ,
+		required: 'billamount is required'
 },
-    payableamount: {
-        type: Number,
-        required: 'payableamount is required'
+			
+        payableamount: {
+        type: Number ,
+		required: 'payableamount is required'
 },
-    billdate: {
-        type: Number,
-        required: 'billdate is required'
-}
-    
+			
+        billdate: {
+        type: Number ,
+		required: 'billdate is required'
+},
+			
 });
 
-
 module.exports = mongoose.model('bill', billSchema);
+		

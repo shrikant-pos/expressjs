@@ -18,4 +18,3 @@ router.post('/deletecustomerstats', middlewares.handlers.asyncHandler(customerst
 // custom routes
 
 module.exports = router;
-

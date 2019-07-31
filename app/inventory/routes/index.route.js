@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+	
 router.use('/', require('./inventory.route'));
 router.use('/inventorytype', require('./inventorytype.route'));
 router.use('/inventorycategory', require('./inventorycategory.route'));

@@ -18,4 +18,3 @@ router.post('/deleteunits', middlewares.handlers.asyncHandler(unitController.del
 // custom routes
 
 module.exports = router;
-

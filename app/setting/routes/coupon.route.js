@@ -18,4 +18,3 @@ router.post('/deletecoupons', middlewares.handlers.asyncHandler(couponController
 // custom routes
 
 module.exports = router;
-

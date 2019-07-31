@@ -18,4 +18,3 @@ router.post('/deleteinventorycategorys', middlewares.handlers.asyncHandler(inven
 // custom routes
 
 module.exports = router;
-

@@ -18,4 +18,3 @@ router.post('/deleteconfigs', middlewares.handlers.asyncHandler(configController
 // custom routes
 
 module.exports = router;
-

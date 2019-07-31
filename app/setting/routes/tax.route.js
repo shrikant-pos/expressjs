@@ -18,4 +18,3 @@ router.post('/deletetaxs', middlewares.handlers.asyncHandler(taxController.delet
 // custom routes
 
 module.exports = router;
-

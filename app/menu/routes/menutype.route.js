@@ -17,5 +17,8 @@ router.post('/deletemenutypes', middlewares.handlers.asyncHandler(menutypeContro
 
 // custom routes
 
-module.exports = router;
+router.post('/getmenus_title', middlewares.handlers.asyncHandler(menutypeController.getmenus_title));
 
+router.post('/getmenudetails_code', middlewares.handlers.asyncHandler(menutypeController.getmenudetails_code));
+
+module.exports = router;

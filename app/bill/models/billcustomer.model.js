@@ -2,35 +2,39 @@ var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
 // Custom validation functions 
-//@@CustomValidations@@
 
 //Nested types declarations
 
-
 var billcustomerSchema   = new Schema({
+	
         code: {
-        type: String,
-        required: 'code is required'
+        type: String ,
+		required: 'code is required'
 },
-    name: {
-        type: String,
-        required: 'name is required'
+			
+        name: {
+        type: String ,
+		required: 'name is required'
 },
-    mobile: {
-        type: Number
+			
+        mobile: {
+        type: Number 
 },
-    email: {
-        type: String
+			
+        email: {
+        type: String 
 },
-    address: {
-        type: String
+			
+        address: {
+        type: String 
 },
-    isnew: {
-        type: Boolean,
-        required: 'isnew is required'
-}
-    
+			
+        isnew: {
+        type: Boolean ,
+		required: 'isnew is required'
+},
+			
 });
 
-
 module.exports = mongoose.model('billcustomer', billcustomerSchema);
+		

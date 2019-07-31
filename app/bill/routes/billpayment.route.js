@@ -17,5 +17,14 @@ router.post('/deletebillpayments', middlewares.handlers.asyncHandler(billpayment
 
 // custom routes
 
-module.exports = router;
+router.post('/getbills_all', middlewares.handlers.asyncHandler(billpaymentController.getbills_all));
 
+router.post('/getbills_date', middlewares.handlers.asyncHandler(billpaymentController.getbills_date));
+
+router.post('/getbilldetails', middlewares.handlers.asyncHandler(billpaymentController.getbilldetails));
+
+router.post('/getbills_number_customer', middlewares.handlers.asyncHandler(billpaymentController.getbills_number_customer));
+
+router.post('/getbills_location', middlewares.handlers.asyncHandler(billpaymentController.getbills_location));
+
+module.exports = router;

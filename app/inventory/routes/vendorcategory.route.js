@@ -18,4 +18,3 @@ router.post('/deletevendorcategorys', middlewares.handlers.asyncHandler(vendorca
 // custom routes
 
 module.exports = router;
-

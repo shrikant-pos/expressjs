@@ -18,4 +18,3 @@ router.post('/deletecustomerorders', middlewares.handlers.asyncHandler(customero
 // custom routes
 
 module.exports = router;
-

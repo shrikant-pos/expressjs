@@ -18,4 +18,3 @@ router.post('/deletevendors', middlewares.handlers.asyncHandler(vendorController
 // custom routes
 
 module.exports = router;
-

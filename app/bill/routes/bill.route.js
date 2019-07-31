@@ -16,10 +16,15 @@ router.post('/addbills', middlewares.handlers.asyncHandler(billController.addbil
 router.post('/deletebills', middlewares.handlers.asyncHandler(billController.deletebills));
 
 // custom routes
+
 router.post('/getbills_all', middlewares.handlers.asyncHandler(billController.getbills_all));
+
 router.post('/getbills_date', middlewares.handlers.asyncHandler(billController.getbills_date));
+
 router.post('/getbilldetails', middlewares.handlers.asyncHandler(billController.getbilldetails));
+
 router.post('/getbills_number_customer', middlewares.handlers.asyncHandler(billController.getbills_number_customer));
 
-module.exports = router;
+router.post('/getbills_location', middlewares.handlers.asyncHandler(billController.getbills_location));
 
+module.exports = router;
