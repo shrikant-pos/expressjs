@@ -18,6 +18,6 @@
     "jsonwebtoken": "^8.5.1",
     "memory-cache": "^0.2.0",
     "mongoose": "^5.5.11",
-    "nexe": "^2.0.0-rc.34"
+    "nexe": "^4.0.0-rc.2"
   }
 }
